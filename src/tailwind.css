@@ -1,0 +1,30 @@
+/* purgecss start ignore */
+@tailwind base;
+@tailwind components;
+/* purgecss end ignore */
+@tailwind utilities;
+
+@layer components {
+  .img-cover {
+    @apply w-full h-full object-cover;
+  }
+
+  .img-full {
+    @apply w-full h-full;
+  }
+
+  .bg-absolute {
+    @apply absolute w-full h-full top-0 left-0;
+  }
+
+  .icon-bar {
+    @apply w-full h-full flex items-center justify-center;
+  }
+}
+
+@layer utilities {
+  /* default */
+  .align-sub {
+    vertical-align: sub;
+  }
+}
