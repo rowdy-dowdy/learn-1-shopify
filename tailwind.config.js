@@ -1,10 +1,9 @@
 const colors = require('tailwindcss/colors');
 
 module.exports = {
-  purge: {
-    enabled: true,
-    content: ["./**/*.liquid"],
-  },
+  content: [
+    "./**/*.liquid",
+  ],
   theme: {
 		extend: {
       screens: {
@@ -114,6 +113,6 @@ module.exports = {
     }
 	},
   plugins: [
-    // require('@tailwindcss/line-clamp')
+    require('@tailwindcss/line-clamp')
   ],
 }

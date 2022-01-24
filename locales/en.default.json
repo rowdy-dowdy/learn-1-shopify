@@ -196,9 +196,10 @@
       "search_for": "Search for “{{ terms }}”"
     },
     "cart": {
-      "cart": "Cart"
+      "title": "Cart",
+      "empty": "No products in cart"
     },
-    "contact": {
+    "contact": { 
       "form": {
         "name": "Name",
         "email": "Email",
@@ -224,7 +225,7 @@
       }
     },
     "cart": {
-      "title": "Your cart",
+      "title": "Cart",
       "caption": "Cart items",
       "remove_title": "Remove {{ title }}",
       "subtotal": "Subtotal",

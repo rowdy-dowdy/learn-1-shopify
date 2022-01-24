@@ -1,0 +1,89 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  body {
+    @apply text-zinc-800;
+  }
+
+  [x-cloak] { display: none !important; }
+}
+
+@layer components {
+  .img-cover {
+    @apply w-full h-full object-cover;
+  }
+
+  .img-full {
+    @apply w-full h-full;
+  }
+
+  .bg-absolute {
+    @apply absolute w-full h-full top-0 left-0;
+  }
+
+  .icon-bar {
+    @apply w-full h-full flex items-center justify-center;
+  }
+
+  .bg-loading {
+    @apply invisible absolute w-full h-full top-0 left-0;
+
+    animation-duration: 2.2s;
+    animation-fill-mode: forwards;
+    animation-iteration-count: infinite;
+    animation-name: shimmer;
+    animation-timing-function: linear;
+    background: #f6f6f6;
+    background: linear-gradient(to right, #f6f6f6 4%, #e6e6e6 25%, #f6f6f6 36%);
+    background-size: 1200px 100%
+  }
+
+  .js-lazyload.loading .bg-loading {
+    @apply visible;
+  }
+
+  .bg-error {
+    @apply hidden absolute w-full h-full top-0 left-0;
+  }
+
+  .js-lazyload.error .bg-error {
+    @apply h-full flex flex-col justify-center items-center text-2xl bg-zinc-300 text-center text-yellow-600;
+  }
+
+
+  .js-lazyload img {
+    @apply absolute top-0 left-0 w-full h-full opacity-100 transform scale-100 transition-all duration-500 ease-in-out;
+  }
+
+  .js-lazyload.loading img,
+  .js-lazyload.error img {
+    @apply scale-0 opacity-0 transition-none;
+  }
+
+  @keyframes shimmer {
+    0% {
+      background-position: -1200px 0
+    }
+
+    100% {
+      background-position: 1200px 0
+    }
+  }
+}
+
+@layer utilities {
+  .transition-all-0\.3 {
+    @apply transition-all duration-300 ease-in-out;
+  }
+
+  .transition-all-0\.5 {
+    @apply transition-all duration-500 ease-in-out;
+  }
+
+  .transition-all-0\.7 {
+    @apply transition-all duration-700 ease-in-out;
+  }
+}
+
